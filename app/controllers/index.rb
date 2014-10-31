@@ -3,7 +3,6 @@ get '/' do
   redirect "sessions/new"
 end
 
-
 get "/sessions/new" do
   erb :"sessions/new"
 end
@@ -113,3 +112,5 @@ end
 #   @users = User.all
 #   erb :'/home'
 # end
+=======
+>>>>>>> migrations-models-seeds
