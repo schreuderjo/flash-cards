@@ -1,6 +1,6 @@
-michael = User.create!(name: "Michael Steichen", email: "michael.steichen@gmail.com", password_hash: "123456")
-jordan = User.create!(name: "Jordan Schreuder", email: "schreuderjo@gmail.com", password_hash: "123abc")
-jo_schmo = User.create!(name: "Joe Schmoe", email: "joeschmoe@gmail.com", password_hash: "abc123")
+michael = User.create!(name: "Michael Steichen", email: "michael.steichen@gmail.com", password: "123456")
+jordan = User.create!(name: "Jordan Schreuder", email: "schreuderjo@gmail.com", password: "123abc")
+jo_schmo = User.create!(name: "Joe Schmoe", email: "joeschmoe@gmail.com", password: "abc123")
 
 capitals = Deck.create!(name: "US Capitals")
 

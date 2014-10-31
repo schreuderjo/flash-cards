@@ -1,12 +1,12 @@
 class User < ActiveRecord::Base
   validates :email, uniqueness: true
-  validates :password_hash, uniqueness: true
+  validates :password, presence: true
 
   has_many :rounds
   has_many :decks, through: :rounds
 
   def self.authenticate(attributes)
-    User.find_by(email: attributes[:email], password_hash: attributes[:password])
+    User.find_by(email: attributes[:email], password: attributes[:password])
   end
 
   # def password

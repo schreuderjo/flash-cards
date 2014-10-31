@@ -34,6 +34,7 @@ end
 
 get "/users/:user_id" do
   @user = User.find(params[:user_id])
+  @decks = Deck.all
   erb :"users/show"
 end
 
@@ -112,5 +113,4 @@ end
 #   @users = User.all
 #   erb :'/home'
 # end
-=======
->>>>>>> migrations-models-seeds
+
