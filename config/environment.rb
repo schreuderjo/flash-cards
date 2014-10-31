@@ -12,11 +12,13 @@ require 'uri'
 require 'pathname'
 
 require 'pg'
+require 'bcrypt'
 require 'active_record'
 require 'logger'
 
 require 'sinatra'
 require "sinatra/reloader" if development?
+
 
 require 'erb'
 enable :sessions
