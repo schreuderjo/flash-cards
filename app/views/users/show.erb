@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Hello <%=@user.name %></h1>
+
+<h2> DECK LIST <h2>
+  <% @decks.each do |deck| %>
+  <ul>
+    <li><a href="/decks/<%=deck.id%>"> <%= deck.name %> </a></li>
+  </ul>
+  <%end%>
+
+
+  <form action='/' method="GET">
+    <input type="submit" value="Logout">
+    </form>
+</div>
