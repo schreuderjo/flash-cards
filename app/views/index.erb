@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Welcome to John & Jordan's User's App</h1>
+
+  <form action='/' method="POST" >
+    <ul>
+      <li>
+        <label for="user_email">Email</label>
+        <input id="user_email" type="text" name="user[email]"/>
+      </li>
+      <li>
+        <label for="user_password">Password</label>
+        <input id="user_password" type="text" name="user[password]"/>
+      </li>
+      <li>
+        <input type="submit" value="Log in" />
+      </li>
+    </ul>
+  </form>
+  <form action='/new_user' method="GET">
+    <input type="submit" value="NEW USER">
+   </form>
+</div>
