@@ -1,0 +1,18 @@
+<div class="container">
+  <p><%= @card.question %></p>
+  <form action='/show' method="POST" >
+    <ul>
+      <li>
+        <label for="guess">Guess</label>
+        <input id="user_guess" type="text" name="user[guess]"/>
+      </li>
+      <ul>
+    </form>
+    <form action='/users/new' method="POST">
+    <input type="submit" value="Submit">
+   </form>
+</div>
+
+<!-- # show question where card id = num_counter
+# make the num_counter go up
+# -->

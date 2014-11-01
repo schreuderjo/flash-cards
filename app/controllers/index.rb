@@ -43,6 +43,18 @@ get "/logout" do
   redirect "/sessions/new"
 end
 
+get '/decks/:deck_id' do
+  deck_id = params[:deck_id]
+  @deck = Deck.find(deck_id)
+  card = @deck.cards.find(52)
+  card_id = card.id
+  redirect "/decks/#{deck_id}/cards/#{card_id}"
+end
+
+get '/decks/:deck_id/cards/:card_id' do
+  @card = Card.find(params[:card_id])
+  erb :"cards/show"
+end
 
 
 
