@@ -6,7 +6,15 @@ class User < ActiveRecord::Base
   has_many :decks, through: :rounds
 
   def self.authenticate(attributes)
-    User.find_by(email: attributes[:email], password: attributes[:password_hash])
+    # raise attributes.inspect
+    # User.find_by(email: attributes[:email], password_hash: attributes[:password])
+    user = User.find_by(email: attributes[:email])
+    # if user.password == attributes[:password]
+    if user
+      # return user if BCrypt::Password.new(user.password_hash) == attributes[:password]
+      return user if user.password == attributes[:password]
+    end
+    nil
   end
 
   def password
