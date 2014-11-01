@@ -125,6 +125,11 @@ namespace :db do
   end
 end
 
+# desc 'YOLO'
+# task :yolo do
+#   exec(db:drop && db:create && db:migrate && db:seed)
+# end
+
 desc 'Start IRB with application environment loaded'
 task "console" do
   exec "irb -r./config/environment"
