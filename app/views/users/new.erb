@@ -3,19 +3,22 @@
   <% if @error %>
     <%= @error %>
   <% end %>
-  <form action='/users' method="POST" >
+  <form  class="signin" action='/users' method="POST" >
     <ul>
       <li>
-        <label for="user_name">Name</label>
-        <input id="user_name" type="text" name="user[name]"/>
+        <input class="user_input" type="text" name="user[name]" placeholder="Name"/>
+      </li>
+      <li><br>
       </li>
       <li>
-        <label for="user_email">Email</label>
-        <input id="user_email" type="text" name="user[email]"/>
+        <input class="user_input" type="text" name="user[email]" placeholder="Email"/>
+      </li>
+      <li><br>
       </li>
       <li>
-        <label for="user_password">Password</label>
-        <input id="user_password" type="password" name="user[password]"/>
+        <input class="user_input" type="password" name="user[password]" placeholder="Password"/>
+      </li>
+      <li><br>
       </li>
       <li>
         <input type="submit" value="Create Account" />

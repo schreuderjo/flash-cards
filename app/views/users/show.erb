@@ -1,15 +1,25 @@
-<div class="container">
-  <h1>Hello <%=@user.name %></h1>
+<html>
 
-<h2> DECK LIST <h2>
+<div class="container">
+  <form action='/' method="GET">
+    <input class="logout" type="submit" value="Logout">
+  </form>
+  <form action='/stats/<%=@user.id%>' method="GET">
+    <input class="logout" type="submit" value="Stats">
+  </form>
+  <h1>Hello <%=@user.name %></h1>
+  <h3> Pick a deck: </h3>
+
   <% @decks.each do |deck| %>
-  <ul>
+  <ul class="deck_list">
     <li><a href="/decks/<%=deck.id%>"> <%= deck.name %> </a></li>
   </ul>
   <%end%>
 
 
-  <form action='/' method="GET">
-    <input type="submit" value="Logout">
-    </form>
+<!--   <form action='/' method="GET">
+    <input id="logout" type="submit" value="Logout">
+    </form> -->
 </div>
+
+</html>

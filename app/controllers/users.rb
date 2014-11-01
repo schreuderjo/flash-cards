@@ -35,6 +35,12 @@ get "/users/:user_id" do
   erb :"users/show"
 end
 
+get "/stats/:user_id" do
+  @user = User.find(params[:user_id])
+  # @guesses = Guess
+  erb :"users/stats"
+end
+
 get "/logout" do
   session.clear
   redirect "/sessions/new"
