@@ -1,16 +1,16 @@
 <div class="container">
+  <%=session[:message]%>
   <p><%= @card.question %></p>
-  <form action='/show' method="POST" >
-    <ul>
-      <li>
+  <form action='/decks/<%= @deck_id %>/cards/<%= @card.id %>' method="POST" >
+
         <label for="guess">Guess</label>
-        <input id="user_guess" type="text" name="user[guess]"/>
-      </li>
-      <ul>
-    </form>
-    <form action='/decks/<%= @deck_id %>/cards/<%= @card.id %>' method="POST">
-    <input type="submit" value="Submit">
+        <input id="user_guess" type="text" name="user_input"/>
+
+
+
+      <input type="submit" value="Submit">
    </form>
+
 </div>
 
 <!-- # show question where card id = num_counter
