@@ -1,10 +1,10 @@
 <html>
+  <div id="session_correctness"> <%=session[:message]%> </div>
 <div class="container">
-  <%=session[:message]%>
-  <p><%= @card.question %></p>
-  <form action='/decks/<%= @deck_id %>/cards/<%= @card.id %>' method="POST" >
-        <label for="guess">Guess</label>
-        <input id="user_guess" type="text" name="user_input"/>
+  <p class="question"><%= @card.question %></p>
+  <form class= "card_guess" action='/decks/<%= @deck_id %>/cards/<%= @card.id %>' method="POST" >
+
+      <input id="user_guess" type="text" name="user_input"/>
       <input type="submit" value="Submit">
    </form>
 </div>
